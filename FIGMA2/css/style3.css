@@ -1,0 +1,293 @@
+/* Base Canvas Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #acd6a2;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1050px;
+    width: 100%;
+}
+
+/* Central Framing Canvas Card Box Behind Content */
+.main-card-box {
+    border-radius: 24px;
+    padding: 45px;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.95);
+}
+
+/* --- DEBUT THEME OVERRIDES --- */
+.main-card-box.debut-theme {
+    background-color: #5d8852;
+    border: none;
+}
+
+/* Header Sections Configuration */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 45px;
+    min-height: 250px;
+}
+
+.side-decor {
+    flex: 1;
+}
+
+/* Left Butterflies Layout Alignment */
+.left-decor-debut {
+    position: relative;
+    margin-left: -45px;
+    margin-top: -20px;
+}
+
+/* Makes the butterfly group element noticeably bigger */
+.decor-butterfly {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin-top: -10px;
+}
+
+/* --- MIRRORED FROM REPUTATION IMAGERY LAYOUT SPECIFICATIONS --- */
+.album-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.album-home-link {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    line-height: 0;
+    padding: 10px;
+    
+    /* Removed the bottom line by using individual borders */
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.album-picture {
+    width: 195px;
+    height: 195px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.album-home-link:hover .album-picture {
+    transform: scale(1.03);
+    filter: brightness(0.9);
+}
+
+/* --- Carousel Navigation Layout and Splitting --- */
+.carousel-nav-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+}
+
+/* Separate interactive button targets for arrows */
+.carousel-arrow {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease;
+    padding: 0 5px;       
+    display: inline-block;
+    line-height: 1;
+}
+
+.carousel-arrow:hover {
+    opacity: 0.6;
+    transform: scale(1.15);
+}
+
+/* Central dots style - Enforces a locked visual width footprint */
+.carousel-dots {
+    letter-spacing: 1px;   
+    color: #ffffff;
+    user-select: none;     
+    pointer-events: none;  
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    width: 82px;           /* Standardized pixel footprint forces arrows to lock in place */
+}
+
+/* Specific styling for the target dot to make it darker */
+.active-dot {
+    color: #314b2a;        /* Elegant forest contrast shade for the dark 2nd dot indicator */
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Right Side Floating Elements Arrangement */
+.right-decor-debut {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: -25px;
+}
+
+.decor-babybreath {
+    position: absolute;
+    width: 230px;
+    top: -45px;
+    right: -20px;
+    z-index: 1;
+    opacity: 0.85;
+}
+
+.decor-guitar {
+    position: relative;
+    width: 95px;
+    height: auto;
+    z-index: 2;
+    margin-top: 15px;
+    transform: rotate(5deg);
+}
+
+/* Structural Content Balance Splits */
+.content-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+.biography {
+    flex: 1.5;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #ffffff;
+}
+
+.biography p { margin-bottom: 18px; }
+.u { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Phone Section Screen Geometry Alignment with img/mobile.png */
+.phone-section {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.phone-container {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+}
+
+.phone-image { 
+    width: 100%; 
+    display: block; 
+    height: auto;
+    pointer-events: none;
+}
+
+/* Unified positioning geometry with Reputation theme specs */
+.lyrics-screen {
+    position: absolute;
+    top: 10%;            
+    left: 20%;          
+    width: 60%;
+    height: 80%;
+    padding: 30px 20px 20px 20px;
+    overflow-y: auto;
+    border-radius: 36px;
+    box-sizing: border-box;
+    
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.lyrics-screen.debut-lyrics-bg {
+    background: #5d8852;
+}
+
+.lyrics-screen::-webkit-scrollbar {
+    display: none;
+}
+
+.lyrics-label {
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.lyrics-label.debut-label-color {
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+#lyrics-content {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    white-space: pre-line;
+    line-height: 1.55;
+    color: #ffffff;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+/* Bottom Grid Track Container */
+.tracklist-box.debut-tracks {
+    background-color: #86aabb;
+    border-radius: 20px;
+    padding: 35px 40px;
+}
+
+.tracklist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 35px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.tracklist-box.debut-tracks .song { 
+    cursor: pointer; 
+    transition: color 0.15s ease-in-out;
+    color: #ffffff;
+}
+
+.tracklist-box.debut-tracks .song:hover { 
+    color: #3b5c33; 
+}
+
+.tracklist-box.debut-tracks .song.active { 
+    font-style: normal; 
+    text-decoration: underline; 
+    font-weight: 900;
+}

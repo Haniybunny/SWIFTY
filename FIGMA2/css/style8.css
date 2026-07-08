@@ -1,0 +1,283 @@
+/* Core Structural Layout Styling */
+body {
+    background-color: #101e2d;
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Master Box Wrapper from Screenshot Design */
+.unified-interface-box {
+    width: 90%;
+    max-width: 1050px;
+    background-color: #8faec4; /* Pastel sky blue background */
+    border: 1px solid #1a2a3a;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+    position: relative;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Header & Album Setup */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 340px; /* Enhanced headroom configuration */
+    margin-bottom: 15px;
+}
+
+/* Stacks items vertically under the center layout block */
+.carousel-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: auto;
+    z-index: 5;
+}
+
+/* Link area framework wrapper */
+.album-home-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* FIX: Changed from border to 3-sided borders (top, left, right) to remove the bottom line */
+.album-border-wrapper {
+    border-top: 2px solid #dfd3bd;
+    border-left: 2px solid #dfd3bd;
+    border-right: 2px solid #dfd3bd;
+    border-bottom: none;
+    padding: 12px;
+    background: transparent;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.album-home-link:hover .album-border-wrapper {
+    transform: scale(1.02);
+}
+
+.album-cover {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Absolute Floating Scatters for Birds */
+.bird-scatter {
+    position: absolute;
+    width: 120px; 
+    height: 85px; 
+    object-fit: contain;
+    opacity: 0.85;
+    z-index: 2;
+}
+
+/* Left Flying Flock Coordinates */
+.scatter-l1 { left: 4%; top: 15px; transform: rotate(-10deg); }
+.scatter-l2 { left: 16%; top: 90px; transform: rotate(5deg); }
+.scatter-l3 { left: 6%; top: 155px; transform: rotate(-3deg); }
+
+/* Right Flying Flock Coordinates */
+.scatter-r1 { right: 4%; top: 25px; transform: rotate(15deg); }
+.scatter-r2 { right: 18%; top: 80px; transform: rotate(-8deg); }
+.scatter-r3 { right: 7%; top: 160px; transform: rotate(4deg); }
+
+/* --- Carousel Sizing & Structural Properties --- */
+.carousel-indicators {
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Standardized Arrow Elements Styling Layout */
+.carousel-arrow {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 6px;
+    display: inline-block;
+    line-height: 1;
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.carousel-arrow:hover {
+    opacity: 0.6;
+    transform: scale(1.15);
+}
+
+/* Standardized static text string dot logic */
+.carousel-dots {
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.4);
+    user-select: none;
+    pointer-events: none;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
+    padding: 0 6px;
+}
+
+/* Active tracked single element highlight focus */
+.active-dot {
+    color: #ffffff;
+    display: inline-block;
+    line-height: 1;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #dfd3bd;
+    margin: 20px 0;
+}
+
+/* Split Column Layout Grid */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: start;
+}
+
+.description-column p {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* Phone Layout Shell Frame */
+.phone-wrapper {
+    width: 280px;
+    height: 520px;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Extracted Phone Layout Frame Base styling */
+.phone-frame-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Virtual Scroll Viewport Inside Frame */
+.phone-screen {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    width: 170px;
+    height: 362px;
+    background-color: #8faec4;
+    color: #ffffff;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: scroll; /* Forces standard custom viewport functionality */
+    z-index: 2;
+}
+
+/* Webkit Scrollbar Customization for layout screenshot styling matches */
+.phone-screen::-webkit-scrollbar {
+    width: 14px;
+}
+.phone-screen::-webkit-scrollbar-track {
+    background: #8faec4;
+}
+.phone-screen::-webkit-scrollbar-thumb {
+    background: #8faec4;
+    border-radius: 7px;
+    border: 2px solid #8faec4;
+}
+
+.lyrics-header {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
+}
+
+#lyrics-content p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Interactive Footer & Sand System Accent Layout */
+.tracks-footer {
+    margin-top: 40px;
+    background-color: #dfc89d; /* Natural Beach Sand Base Color tint */
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: visible;  /* CRITICAL: Prevents the footer from cutting the shell off */
+}
+
+/* Extracted Sand layer repeating element design */
+.sand-texture-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.track-link {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.track-link:hover, .track-link.accent {
+    color: #101e2d; /* High contrast select dark blue tone */
+}
+
+/* Configure the shell decoration */
+.seashell-decorator {
+    display: block;
+    position: absolute;
+    bottom: -50px;         /* Distance from the bottom of the footer */
+    right: 15px;          /* Distance from the right edge of the footer */
+    width: 150px;          /* Ensure it has a physical width */
+    height: 150px;         /* Ensure it has a physical height */
+    object-fit: contain;
+    z-index: 10;          /* Forces it to sit on top of background colors */
+}

@@ -1,0 +1,279 @@
+/* Base Layout Configurations */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #D3C2A3;
+    font-family: 'Georgia', serif;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Background image handling layer */
+.bg-image-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* The Single Unified Container Box */
+.unified-interface-box {
+    background-color: #4A1504; /* Deep mahogany red panel fill */
+    border: 1px solid #5D1F0E;
+    border-radius: 24px;
+    padding: 35px;
+    width: 100%;
+    max-width: 1050px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header Container Structure */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 250px; /* Slight height increase to manage vertical tracking flow nicely */
+}
+
+/* Individual Floating/Scattered Lips Layout rules */
+.kiss-scatter {
+    position: absolute;
+    width: 100px;
+    height: 75px;
+    opacity: 0.85;
+    display: block;
+    z-index: 1;
+}
+
+.kiss-scatter img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+}
+
+/* Scattered coordinate sets */
+.scatter-l1 { left: 2%; top: 15px; transform: rotate(-15deg); }
+.scatter-l2 { left: 14%; top: 100px; transform: rotate(12deg); }
+.scatter-l3 { left: 6%; top: 145px; transform: rotate(-5deg); }
+
+.scatter-r1 { right: 3%; top: 30px; transform: rotate(20deg); }
+.scatter-r2 { right: 13%; top: 85px; transform: rotate(-18deg); }
+.scatter-r3 { right: 5%; top: 150px; transform: rotate(8deg); }
+
+/* Stacks items vertically under the center layout block */
+.carousel-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: auto;
+    z-index: 2;
+}
+
+/* Link area framework wrapper */
+.album-home-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* FIX: Changed from border to 3-sided borders (top, left, right) to remove the bottom line */
+.album-border-wrapper {
+    border-top: 2px solid #D3C2A3; 
+    border-left: 2px solid #D3C2A3; 
+    border-right: 2px solid #D3C2A3; 
+    border-bottom: none;
+    padding: 12px;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.album-home-link:hover .album-border-wrapper {
+    transform: scale(1.02);
+}
+
+/* Normalized cover display dimension metrics */
+.album-cover {
+    width: 185px;
+    height: 185px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Vertical Separator Accents */
+.line-decorator-left, .line-decorator-right {
+    position: absolute;
+    top: 10%;
+    width: 2px;
+    height: 130px;
+    background: linear-gradient(to bottom, transparent, #D3C2A3, transparent);
+}
+.line-decorator-left { left: -45px; }
+.line-decorator-right { right: -45px; }
+
+/* --- Carousel Sizing & Structural Properties --- */
+.carousel-indicators {
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Standardized Arrow Elements Styling Layout */
+.carousel-arrow {
+    color: #FFFFFF;
+    text-decoration: none; 
+    cursor: pointer;
+    user-select: none;
+    padding: 0 6px;
+    display: inline-block;
+    line-height: 1;
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.carousel-arrow:hover {
+    opacity: 0.6;
+    transform: scale(1.15);
+}
+
+/* Standardized static text string dot logic */
+.carousel-dots {
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.3);
+    user-select: none;
+    pointer-events: none;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
+    padding: 0 6px;
+}
+
+/* Active tracked single element highlight focus */
+.active-dot {
+    color: #FFFFFF;
+    display: inline-block;
+    line-height: 1;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D3C2A3, transparent);
+    margin: 25px 0;
+}
+
+/* Main Content Column Configurations */
+.main-content {
+    display: flex;
+    gap: 40px;
+}
+
+.description-column {
+    flex: 2;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.description-column p {
+    margin-bottom: 20px;
+}
+
+/* Smartphone Structural Layout Configuration */
+.phone-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.phone-wrapper {
+    position: relative;
+    width: 280px;
+    height: 520px;
+}
+
+.phone-frame-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    pointer-events: none;
+}
+
+.phone-screen {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    width: 180px;
+    height: 370px;
+    background-color: #4A1504;
+    color: #FFFFFF;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;  
+}
+
+.phone-screen::-webkit-scrollbar {
+    display: none;
+}
+
+.lyrics-header {
+    font-family: Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    margin-top: 0;
+    border-bottom: 1px solid #3d140b;
+    padding-bottom: 5px;
+}
+
+/* Tracklist Tray Segment */
+.tracks-footer {
+    margin-top: 35px;
+    background-color: #2D0A01; 
+    border: 1px solid #411306;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px 22px;
+}
+
+.track-link {
+    color: #B19B81;
+    font-size: 0.82rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.track-link:hover, .track-link.accent {
+    color: #FFFFFF;
+}

@@ -1,0 +1,242 @@
+/* Base Canvas Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #363333;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1050px;
+    width: 100%;
+}
+
+/* Central Framing Canvas Card Box Behind Content */
+.main-card-box {
+    background-color: #050505;
+    border: 1px solid #141414;
+    border-radius: 24px;
+    padding: 45px;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.95);
+}
+
+/* Header Sections Configuration */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 45px;
+    min-height: 250px;
+}
+
+.side-decor {
+    flex: 1;
+}
+
+.left-decor {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -45px; 
+    align-items: center;
+}
+
+/* Makes the breaking news image smaller and slightly tilted */
+.left-decor img {
+    width: 220px;                /* Reduced size from 275px to make it smaller */
+    max-width: none;
+    height: auto;
+    display: block;
+    transform: rotate(-6deg);    /* Tilts it slightly to the left */
+    transform-origin: center;
+}
+
+/* Album Box 3-Sided Border Execution */
+.album-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.album-frame {
+    border-top: 2px solid #ffffff;   /* Above Line */
+    border-left: 2px solid #ffffff;  /* Left Line */
+    border-right: 2px solid #ffffff; /* Right Line */
+    border-bottom: none;             /* Keeps open on bottom side */
+    padding: 16px 16px 0 16px;
+}
+
+.album-picture {
+    width: 195px;
+    display: block;
+    height: auto;
+}
+
+/* --- Carousel Navigation Layout and Splitting --- */
+.carousel-nav-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;             /* Clean layout gap between arrows and dots */
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Separate interactive button targets for arrows */
+.carousel-arrow {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease;
+    padding: 0 5px;       /* Enhances clickable click area target footprint */
+    display: inline-block;
+}
+
+.carousel-arrow:hover {
+    opacity: 0.6;
+    transform: scale(1.15); /* Subtle scale response feedback on hover */
+}
+
+/* Static central dots style */
+.carousel-dots {
+    letter-spacing: 1px;
+    color: #ffffff;
+    user-select: none;     /* Prevents accidental text-selection highlighted states */
+    pointer-events: none;  /* Makes dots completely unclickable */
+}
+
+/* Specific styling for the first dot to make it darker */
+.active-dot {
+    color: #666666;        /* Muted gray shade to look darker than white dots */
+    display: inline-block;
+}
+
+/* Layered Multi-Hearts Collage Layout rules */
+.right-decor {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hearts-collage {
+    position: relative;
+    width: 230px;
+    height: 230px;
+}
+
+.love-paper {
+    position: absolute;
+    height: auto;
+}
+
+/* Scaling up the individual stacked heart nodes */
+.heart-1 { width: 130px; top: 0; right: 15px; transform: rotate(-5deg); z-index: 3; }
+.heart-2 { width: 100px; top: 65px; left: 5px; transform: rotate(15deg); z-index: 2; }
+.heart-3 { width: 90px; bottom: 5px; right: 30px; transform: rotate(-12deg); z-index: 1; }
+
+/* Structural Content Balance Splits */
+.content-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 45px;
+}
+
+.biography {
+    flex: 1.5;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #cccccc;
+}
+
+.biography p { margin-bottom: 18px; }
+.u { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Phone Section Screen Geometry Alignment with img/mobile.png */
+.phone-section {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.phone-container {
+    position: relative;
+    width: 320px; /* Physically larger footprint framework scale */
+    margin: 0 auto;
+}
+
+.phone-image { 
+    width: 100%; 
+    display: block; 
+    height: auto;
+    pointer-events: none;
+}
+
+/* Precise containment layout to align text perfectly inside the screen of img/mobile.png */
+.lyrics-screen {
+    position: absolute;
+    top: 6%;           /* Adjusted down slightly to sit nicely below the upper bezel curve */
+    left: 15%;          /* Centers the screen within the phone's hardware bezels */
+    width: 60%;        /* Matches the visual width of the screen display glass */
+    height: 80%;       /* Prevents the black background box from overlapping the bottom borders */
+    background: #000000;
+    
+    /* Adds safe interior space so the lyrics don't hit the screen edges */
+    padding: 30px 20px 20px 20px; 
+    
+    overflow-y: auto;    /* Keeps vertical scroll functionality alive */
+    border-radius: 36px; /* Curves the container to sit flawlessly within the display's inner corners */
+    box-sizing: border-box;
+    
+    /* Hides visible browser scrollbars completely */
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE and Edge */
+}
+
+/* Hides scrollbars for Chrome, Safari, and newer Opera/Edge engines */
+.lyrics-screen::-webkit-scrollbar {
+    display: none;
+}
+
+/* Fixed sizing preventing text lines from touching or clipping the glass edge */
+#lyrics-content {
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    white-space: pre-line;
+    line-height: 1.55;
+    color: #eeeeee;
+    padding-right: 10px; /* Added slight buffer to protect right edge alignment */
+    box-sizing: border-box;
+}
+
+/* Bottom Grid Track Container */
+.tracklist-box {
+    background-color: #f2f2f2;
+    color: #000000;
+    border-radius: 20px;
+    padding: 35px 40px;
+}
+
+.tracklist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 35px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.song { cursor: pointer; transition: color 0.15s ease-in-out; }
+.song:hover { color: #666666; }
+.song.active { font-style: italic; text-decoration: underline; }

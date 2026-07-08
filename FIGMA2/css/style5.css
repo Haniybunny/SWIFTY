@@ -1,0 +1,273 @@
+/* Base Canvas Setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    color: #2b1d0c;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Background image asset layers behind text content */
+.bg-image-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.wrapper {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(3px);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Header & Album Slider Layout Wrapper */
+.album-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* Aligns items vertically and centers them exactly like the Debut card setup */
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+/* Clickable frame container wrapper */
+.album-home-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* FIX: Changed from border to 3-sided borders (top, left, right) to remove the bottom line */
+.image-frame {
+    display: block;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: none;
+    padding: 12px;
+    background: transparent;
+    transition: transform 0.2s ease-in-out;
+}
+
+.album-home-link:hover .image-frame {
+    transform: scale(1.02);
+}
+
+.album-cover {
+    width: 185px;  /* Scaled layout proportions to match Debut and Lover display sizing */
+    height: 185px; 
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    display: block;
+}
+
+/* --- Carousel Text Control Sizing & Placement Layout Block --- */
+.carousel-controls {
+    margin-top: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px; /* Explicit locked font scaling from the Debut screenshot specifications */
+    line-height: 1;
+}
+
+/* Left & Right custom responsive slider layout hooks */
+.carousel-arrow {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 6px;
+    display: inline-block;
+    line-height: 1;
+    transition: opacity 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.carousel-arrow:hover {
+    opacity: 0.5;
+    transform: scale(1.15);
+}
+
+/* Static row alignment style logic preventing line breakage */
+.carousel-dots {
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.25);
+    user-select: none;
+    pointer-events: none;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
+    padding: 0 6px;
+}
+
+/* High contrast tracker active element class focus color */
+.active-dot {
+    color: #000000;
+    display: inline-block;
+    line-height: 1;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #4a3319;
+    margin: 25px 0;
+    opacity: 0.4;
+}
+
+/* Main Layout Grid Splits */
+.main-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.article-section {
+    flex: 1.8;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+.article-section p {
+    margin-bottom: 15px;
+}
+
+.article-section a {
+    color: #3b240b;
+    text-decoration: underline;
+}
+
+/* Smartphone Layout Display Specifications */
+.phone-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.smartphone-container {
+    position: relative;
+    width: 260px;
+    height: auto;
+}
+
+.phone-frame-img {
+    width: 100%;
+    display: block;
+}
+
+.screen-content {
+    position: absolute;
+    top: 11%;
+    left: 20%;
+    width: 60%;
+    height: 80%;
+    background-color: #b98341; 
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen-content h3 {
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.lyrics-text-window {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    overflow-y: auto;
+    flex-grow: 1;
+    color: #000000;
+    padding-right: 5px;
+}
+
+#lyrics-window {
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+#lyrics-window::-webkit-scrollbar {
+    display: none;
+}
+
+/* Bottom Footer Grid Panel tracklists */
+.tracklist-footer {
+    background-color: #6d4b1f;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.tracklist-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.track-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.track-link {
+    color: #1d0f02;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+}
+
+.track-link:hover, .track-link.active-track {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Media Breakpoint Query Blocks */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .tracklist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    body {
+        padding: 10px;
+    }
+}

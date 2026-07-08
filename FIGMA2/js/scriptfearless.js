@@ -1,0 +1,88 @@
+// Data store holding full lyrics for the album tracks
+const albumLyrics = {
+    "fearless": `There's somethin' 'bout the way<br>The street looks when it's just rained<br>There's a glow off the pavement<br>You walk me to the car<br>And you know I wanna ask you to dance right there<br>In the middle of the parking lot<br>Yeah, oh yeah<br><br>We're drivin' down the road<br>I wonder if you know<br>I'm tryin' so hard not to get caught lookin' at you<br>You open your eyes now and turn to me<br>And say, "It's corner-turning, breathtaking"<br>Down this road with you<br><br>And I don't know how it gets better than this<br>You take my hand and drag me headfirst, fearless<br>And I dunno why but with you I'd dance<br>In a storm in my best dress, fearless<br><br>So shave your legs, roll up your jeans<br>Run your hands through your hair, let me see you gleam<br>It's the first kiss, it's flawless, it's really something<br>It's fearless<br><br>And I don't know how it gets better than this<br>You take my hand and drag me headfirst, fearless<br>And I dunno why but with you I'd dance<br>In a storm in my best dress, fearless`,
+
+    "hey-stephen": `Hey Stephen, I know looks can be deceiving<br>But I know I saw a light in you<br>And as we walked we were talking<br>I didn't say half the things I wanted to<br><br>Of all the girls tossing pennies in the pool<br>You make me feel like I'm the only one you see<br>'Cause I can't help it if you look like an angel<br>And you can't help it if you're perfect for me<br><br>Hey Stephen, I've been holding back this feeling<br>So I've got some things to say to you<br>I've seen it all go down and seen you walk around<br>And I've seen you look at me and I know you want to too<br><br>Come to think of it, I've never seen you cry<br>And you've never seen me look down, never asked me why<br>But I've been waiting for you all my life<br>Can't you see me standing right here in your sight?<br><br>Hey Stephen, why are they all so into you?<br>They don't know you like I do, they don't love you like I do<br>Hey Stephen, let them all go, find another guy<br>'Cause I'm the one who's gonna treat you right`,
+
+    "breathe": `I see your face in my mind as I drive away<br>'Cause none of us thought it was gonna end this way<br>People are people and sometimes we change our minds<br>But it's killing me to see you go after all this time<br><br>Music starts playing, and I can't breathe without you<br>But I have to, yeah I have to breathe without you<br><br>Never wanted this, never thought it would come to this<br>Two people looking at a blank page, trying to find a word<br>And I can't breathe without you, but I have to<br><br>It's 2 AM and I'm calling your name<br>But you're not there, it's just the sound of the rain<br>And I'm falling apart, breaking in two<br>I never wanted this, I never wanted to lose you<br><br>Music starts playing, and I can't breathe without you<br>But I have to, yeah I have to breathe without you.`,
+
+    "the-way-i-loved-you": `He is sensible and so incredible<br>And all my single friends are jealous<br>He says everything I need to hear and it's like<br>I couldn't ask for anything better<br><br>He opens my door and I get into his car<br>And he makes me feel like I'm a star<br>But I miss screaming and fighting and kissing in the rain<br>And it's 2:00 AM and I'm cursing your name<br>I'm so in love that I acted insane<br>And that's the way I loved you!<br><br>He respects my space and he gives me my time<br>And he never makes me cry<br>He's the perfect guy, but he's just not you<br><br>But I miss screaming and fighting and kissing in the rain<br>And it's 2:00 AM and I'm cursing your name<br>I'm so in love that I acted insane<br>And that's the way I loved you!`,
+
+    "change": `And it's a sad picture, the final blow hits you<br>Somebody else gets what you wanted again<br>You know it's all the same, another time and place<br>Repeating history and you're getting sick of it<br><br>But these walls that they put up to hold us back will fall down<br>It's a revolution, the time will come for us to win!<br><br>Because these things will change, can you feel it now?<br>These walls will crumble down, we will take the crown<br>And they'll know our name, yeah things are gonna change<br><br>It's a long climb up, but the view is worth the fight<br>We're gonna shine so bright in the middle of the night<br>And they can't stop us now, no they can't hold us down<br>These walls that they put up to hold us back will fall down<br>It's a revolution, the time will come for us to win!`,
+
+    "forever-always": `Once upon a time, I believe it was a Tuesday when I caught your eye<br>And we caught onto something<br>And your hold on the sky went draggin' me down<br>You looked me in the eye and told me you loved me<br><br>Were you just kidding?<br>'Cause it seems to me like it's raining in your bedroom<br>And everything is wrong, it's completely uncalled for<br>You're not forever and always<br><br>Did I say something way too honest, made you run and hide<br>Like a scared little boy? I looked at you and I believed<br>That you were the one, but it's over now<br><br>And it rains in your bedroom, everything is wrong<br>It's completely uncalled for, you're not forever and always<br>You told me you loved me, so why did you go?<br>You're not forever, you're not always.`,
+
+    "mr-perfectly-fine": `Mr. "Perfect face"<br>Mr. "Here to stay"<br>Mr. "Looked me in the eye and told me you would never go away"<br>Everything was right, Mr. "Everything has changed"<br><br>Now you're Mr. "Never told me why"<br>Mr. "Never had to cry"<br>Mr. "Insincere apology so he doesn't look like the bad guy"<br>Hello, Mr. "Perfectly fine"<br><br>How's your heart after breaking mine?<br>Mr. "Always at the right place at the right time," baby<br>Hello, Mr. "Casually cruel"<br>Mr. "Everything revolves around you"<br>I've been Miss "Misery" since your goodbye<br>And you're Mr. "Perfectly fine"<br><br>Now I'm looking at you, and you're looking at her<br>And it hurts a little less than it did before<br>But you're still Mr. "Perfect face", Mr. "Perfectly fine".`,
+
+    "dont-you": `Don't you smile at me and ask me how I've been<br>Don't you say you've missed me if you don't want me again<br>You don't know how much I feel for you still<br>So don't you look at me like that, it's bound to kill<br><br>You went and found somebody new<br>And I'm still here, still in love with you<br>Don't you smile at me, don't you look at me like that<br><br>Why you gotta make it so hard for me to breathe?<br>Why you gotta act like you never wanted to leave?<br>Don't you smile at me and ask me how I've been<br>Don't you say you've missed me if you don't want me again.`,
+
+    "fifteen": `You take a deep breath and you walk through the doors<br>It's the morning of your very first day<br>You say "Hi" to your friends you ain't seen in a while<br>Try and stay out of everybody's way<br><br>Because when you're fifteen and somebody tells you they love you<br>You're gonna believe them<br><br>And you're counting the days until you're finally out<br>And you're making your plans, figuring it out<br>But when you're fifteen, you don't know who you are yet<br><br>So take a deep breath as you walk through the doors<br>It's the morning of your very first day<br>When you're fifteen and somebody tells you they love you<br>You're gonna believe them, yeah you're gonna believe them.`,
+
+    "white-horse": `Say you're sorry, that face of an angel<br>Comes around needed me like it used to do<br>We can't go back, I know that now<br>It's too late for you and your white horse to catch me now<br><br>I'm not a princess, this ain't a fairytale<br>I'm not the one you'll sweep off her feet and lead up the stairwell<br>This is the real world, there are no happy endings here<br><br>So wrap your arms around me, tell me you're sorry<br>But it's too late for you and your white horse to catch me now<br>Yeah, it's too late for you and your white horse to catch me now.`,
+
+    "tell-me-why": `I took a chance, I took a shot<br>And you might think I'm bulletproof, but I'm not<br>You push me down, I hit the floor<br>You text me things that make me doubt who I am anymore<br><br>Tell me why you gotta be so mean to me?<br>Why you gotta treat me like I'm nothing at all?<br>I'm standing here, waiting for you to call<br><br>I know you're angry, I know you're hurt<br>But you don't have to treat me like dirt<br>Tell me why you gotta be so mean to me?<br>Why you gotta treat me like I'm nothing at all?`,
+
+    "jump-then-fall": `I like the way you sound when you say my name<br>I like the way you look when you play your game<br>Don't be afraid to jump then fall into my arms<br>Baby, I'm gonna catch you, clear out all your alarms<br><br>Every time you shine, I shine with you<br>Every time you cry, I cry too<br>Don't be afraid to jump then fall, jump then fall<br><br>The sun is shining, the weather is sweet<br>Make me want to move my dancing feet<br>Don't be afraid to jump then fall into my arms<br>Baby, I'm gonna catch you, clear out all your alarms.`,
+
+    "today-was-a-fairytale": `Today was a fairytale<br>You were the prince<br>I used to be a damsel in distress<br>You took me by the hand and you cleaned up that mess<br><br>Today was a fairytale, I wore a dress<br><br>Time slows down when you look at me<br>I can feel the magic in the air, can't you see?<br>Today was a fairytale, I wore a dress<br><br>You're the best thing that's ever been mine<br>And I'm so glad you made the time<br>Today was a fairytale, you were the prince<br>I used to be a damsel in distress<br>You took me by the hand and you cleaned up that mess.`,
+
+    "we-were-happy": `We used to walk along the streets and talk about our future dreams<br>We were happy, oh so happy<br>Before everything went wrong and split right down the seams<br><br>I miss the way you used to laugh at all my stupid jokes<br>And how we used to stay up late, watching the campfire smoke<br>We were happy, oh so happy<br><br>But now those days are gone, and we've both moved on<br>I'm left here wondering where it all went wrong<br>We used to walk along the streets and talk about our future dreams<br>We were happy, oh so happy.`,
+
+    "bye-bye-baby": `It's the picture of you and me from that summer evening<br>The layout of a life I thought we'd always be leading<br>Bye bye baby, I guess I'll see you around<br>As my world comes crashing down<br><br>You took my heart and you broke it in two<br>Now I'm left here, not knowing what to do<br>Bye bye baby, I guess I'll see you around<br><br>I'm packing up my things, I'm leaving this town<br>No more shedding tears, no more looking down<br>Bye bye baby, I guess I'll see you around<br>As my world comes crashing down.`,
+
+    "love-story": `We were both young when I first saw you<br>I close my eyes and the flashback starts<br>I'm standing there on a balcony in summer air<br><br>See the lights, see the party, the ball gowns<br>See you make your way through the crowd and say, "Hello"<br>Little did I know that you were Romeo<br><br>You were throwing pebbles, and my daddy said, "Stay away from Juliet"<br>And I was crying on the staircase, begging you, "Please don't go"<br>And I said, "Romeo, take me somewhere we can be alone<br>I'll be waiting, all that's left to do is run<br>You'll be the prince and I'll be the princess<br>It's a love story, baby, just say, 'Yes'"<br><br>So I sneaked out to the garden to see you<br>We keep quiet, 'cause we're dead if they knew<br>So close your eyes, escape this town for a little while<br><br>'Cause you were Romeo, I was a scarlet letter<br>And my daddy said, "Stay away from Juliet"<br>But you were everything to me, I was begging you, "Please don't go"<br>And I said, "Romeo, take me somewhere we can be alone<br>I'll be waiting, all that's left to do is run<br>You'll be the prince and I'll be the princess<br>It's a love story, baby, just say, 'Yes'"`,
+
+    "you-belong-with-me": `You're on the phone with your girlfriend, she's upset<br>She's going off about something that you said<br>'Cause she doesn't get your humor like I do<br><br>I'm in the room, it's a typical Tuesday night<br>I'm listening to the kind of music she doesn't like<br>And she'll never know your story like I do<br><br>But she wears short skirts, I wear T-shirts<br>She's Cheer Captain and I'm on the bleachers<br>Dreaming about the day when you wake up and find<br>That what you're looking for has been here the whole time<br><br>If you could see that I'm the one who understands you<br>Been here all along, so why can't you see?<br>You belong with me, you belong with me<br><br>Walkin' the streets with you and your worn-out jeans<br>I can't help thinkin' this is how it ought to be<br>Laughin' on a park bench, thinkin' to myself<br>Hey, isn't this easy?<br><br>And you've got a smile that could light up this whole town<br>I haven't seen it in a while, since she brought you down<br>You say you're fine, I know you better than that<br>Hey, what you doing with a girl like that?<br><br>She wears high heels, I wear sneakers<br>She's Cheer Captain and I'm on the bleachers<br>Dreaming about the day when you wake up and find<br>That what you're looking for has been here the whole time`,
+
+    "untouchable": `Untouchable like a distant diamond sky<br>I'm tracking down every single move you make tonight<br>Beautiful, caught up in the middle of a beautiful dream<br>And I don't want to wake up from it<br><br>You're out of reach, but you're all I see<br>I wish you were right here next to me<br>Untouchable, beautiful dream<br><br>The stars are out, the moon is bright<br>I'm wishing you were here with me tonight<br>Untouchable like a distant diamond sky<br>I'm tracking down every single move you make tonight.`,
+
+    "superstar": `This is a big world, that was a small town<br>There in my rearview mirror disappearing now<br>And you are a superstar, shining down on me<br>While I'm just an ordinary girl hoping you'll see<br><br>I've got your picture pinned up on my wall<br>And I'm just waiting for you to call<br>You're a superstar, shining so bright<br><br>I see you on the television screen<br>You're the most beautiful thing I've ever seen<br>This is a big world, that was a small town<br>And you are a superstar, shining down on me.`,
+
+    "you-all-over-me": `Lost tears down a rainy highway lane<br>Trying to forget every single word you spoke in vain<br>But no matter what I do, I still find pieces of you<br>And you're all over me like a permanent stain<br><br>I changed my number, I changed my place<br>But I can't seem to erase your face<br>You're all over me like a permanent stain<br><br>The rain keeps pouring, the wind keeps blowing<br>And I'm left here, not knowing where I'm going<br>But no matter what I do, I still find pieces of you<br>And you're all over me like a permanent stain.`,
+
+    "thats-when": `That's when you came back around and said you missed me<br>That's when I realized that nobody else could kiss me<br>The way you did that night before you left town<br>And now my walls are coming completely down<br><br>I open up the door and I let you in<br>And that's when our story can finally begin<br>You said you missed me, and I realized it too<br><br>No more running away, no more hiding the truth<br>I'm spending the rest of my days with you<br>That's when you came back around and said you missed me<br>And now my walls are coming completely down.`
+};
+
+// Safeguard execution by wrapping everything inside a DOMContentLoaded event handler
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // Target DOM nodes from HTML elements
+    const lyricsContainer = document.getElementById('lyrics-window');
+    const tracks = document.querySelectorAll('.track-link');
+
+    // Verification check: prints a warning in the browser console if nodes can't be resolved
+    if (!lyricsContainer) console.error("Error: Could not find element with id 'lyrics-window'");
+    if (tracks.length === 0) console.warn("Warning: No elements found with class '.track-link'");
+
+    // Set up dynamic click listeners
+    tracks.forEach(track => {
+        track.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Clean previous active modifications from all links
+            tracks.forEach(t => t.classList.remove('accent'));
+            
+            // Apply white-bold active highlight to current track link
+            track.classList.add('accent');
+            
+            // Extract the identifier string
+            const trackId = track.getAttribute('data-track');
+            
+            // Render lyric block if key matches, otherwise display a fallback message
+            if (lyricsContainer) {
+                if (albumLyrics[trackId]) {
+                    lyricsContainer.innerHTML = `<p>${albumLyrics[trackId]}</p>`;
+                } else {
+                    lyricsContainer.innerHTML = `<p>Lyrics are missing or loading...</p>`;
+                    console.warn(`Mismatch: Track ID "${trackId}" was requested but not found in albumLyrics.`);
+                }
+                
+                // SEAMLESS UPDATE: Smoothly glides the content container back to the top
+                lyricsContainer.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
